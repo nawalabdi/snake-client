@@ -14,6 +14,8 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Connection successfully established")
     conn.write("Name: NAA");
+    conn.write("Say: hey guys")
+    conn.write("Say: Whats Up")
     // conn.write("Move: up" ); << hardcoded move up message to the server 
   
    
