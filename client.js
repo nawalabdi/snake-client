@@ -1,3 +1,4 @@
+const { get } = require("http");
 const net = require("net");
 
 // establishes a connection with the game server
@@ -7,7 +8,12 @@ const connect = function () {
     port: "50541"
   });
   conn.on("data", (data) => {
-    console.log(data, "hi")
+    console.log(data, "some data")
+    // code that does something
+  });
+  conn.on("connect", (message) => {
+    console.log("Connection successfully established")
+    conn.write("Name: NAB");
     // code that does something
   });
 
