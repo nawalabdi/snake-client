@@ -1,4 +1,5 @@
 const { connect } = require("http2");
+const { UP } = require("./constants");
 let connection;
 
 const setupInput = function (conn) {
@@ -18,7 +19,7 @@ const handleUserInput = function (data) {
     process.exit();
   }
   if (data === "w") {
-    connection.write("Move: up")
+    connection.write(UP) // A  better way to do it, using a variable declared in constants file. Instead of writing out strings.
   }
   if (data === "a") {
     connection.write("Move: left")
@@ -36,7 +37,7 @@ const handleUserInput = function (data) {
     connection.write("Say: Whats Up")
   }
   if (data === "r") {
-    connection.write("Say: How are you")
+    connection.write("Say: How are you ")
   }
 
 
