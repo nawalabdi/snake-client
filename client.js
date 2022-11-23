@@ -8,7 +8,7 @@ const connect = function () {
     port: "50541"
   });
   conn.on("data", (data) => {
-    console.log(data, "some data")
+    console.log(data)
     // code that does something
   });
   conn.on("connect", () => {
