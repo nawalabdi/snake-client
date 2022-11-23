@@ -11,9 +11,12 @@ const connect = function () {
     console.log(data, "some data")
     // code that does something
   });
-  conn.on("connect", (message) => {
+  conn.on("connect", () => {
     console.log("Connection successfully established")
-    conn.write("Name: NAB");
+    conn.write("Name: NAA");
+    // conn.write("Move: up" ); << hardcoded move up message to the server 
+  
+   
     // code that does something
   });
 
